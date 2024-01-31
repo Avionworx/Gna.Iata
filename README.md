@@ -1,6 +1,6 @@
-### AvionWorx [Gna.Iata](https://www.nuget.org/packages/Gna.Iata/1.0.0.72#show-readme-container) code examples
+### AvionWorx [Gna.Iata](https://www.nuget.org/packages/Gna.Iata) code examples
 
-#### Read and save example
+### Read and save example
  ```csharp
             using Gna.Iata;
 
@@ -18,3 +18,10 @@
             // Save
             ssimWriter.SaveToFile(newFileName);
 ```
+---
+**NOTE**
+
+### This is multi-target project.
+![Alt text](gna.iata.frameworks.png "Gna.Example multi-target")
+---
+
