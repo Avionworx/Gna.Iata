@@ -2,14 +2,14 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-	<TargetFrameworks>net462;NetStandard2.1;net6.0;net7.0;net8.0</TargetFrameworks>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <TargetFrameworks>net462;NetStandard2.1;net6.0;net7.0;net8.0</TargetFrameworks>
+	<ImplicitUsings>enable</ImplicitUsings>
+	<Nullable>enable</Nullable>
 	<LangVersion>12</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Gna.Iata" Version="1.0.0.105" />
+    <PackageReference Include="Gna.Iata" Version="1.0.0.157" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,6 +17,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="sample.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="sample_with_duplicates.ssim">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
