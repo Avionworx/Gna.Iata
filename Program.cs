@@ -8,7 +8,7 @@
             Console.WriteLine("Which example to run? (enter nbr and press [Enter] key)");
             Console.WriteLine("[1] Synchronously reading and writing to/from SSIM file");
             Console.WriteLine("[2] Asynchronously reading and writing to/from compressed SSIM file");
-            Console.WriteLine("[3] Reading from non compilant IATA SSIM file");
+            Console.WriteLine("[3] Reading from non compliant IATA SSIM file");
 
             var nbr = Console.ReadLine();
 
@@ -23,7 +23,7 @@
                         await ZipFileAsynchronousReadWriteExample();
                         break;
                     case 3:
-                        Example03_ReadIATANonCompilantExample();
+                        Example03_ReadIATANonCompliantExample();
                         break;
 
                 }
