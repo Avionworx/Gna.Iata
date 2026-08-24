@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Gna.Iata" Version="1.0.0.889" />
+    <PackageReference Include="Gna.Iata" Version="1.0.0.896" />
   </ItemGroup>
 
   <ItemGroup>

@@ -11,6 +11,7 @@
             Console.WriteLine("[3] Reading from non compliant IATA SSIM file");
             Console.WriteLine("[4] Display previous,current and next IATA seasons");
             Console.WriteLine("[5] Read SSIM file metadata");
+            Console.WriteLine("[6] Write SSIM file metadata");
 
             var nbr = Console.ReadLine();
 
@@ -32,6 +33,9 @@
                         break;
                     case 5:
                         Example05_ReadMetadataExample();
+                        break;
+                    case 6:
+                        Example06_WriteMetdataExample();
                         break;
                 }
             } 
