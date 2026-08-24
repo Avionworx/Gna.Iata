@@ -31,31 +31,25 @@ namespace Gna.Example
                 legA.AcTypeCode = "321";
                 legA.AcVersion = "AWX180Y";
                 legA.AcConfiguration = "Y180";
-                legA.STD = legA.FlightDate.Value.AddHours(10);
-                legA.STA = legA.STD.Value.AddHours(1);
+                legA.STD = legA.FlightDate.Value.AddHours(10); // 10:00
+                legA.STA = legA.STD.Value.AddHours(1); // 11:00
                 SetLocalDiff(legA, 60);
-                yield return legA;
+                yield return legA; 
 
-                FlightLeg legB = new();
-                legB.FlightDate = legA.FlightDate;
-                legB.DepAirportCode = to;
-                legB.ArrAirportCode = from;
-                legB.AirlineCode = airlineCode;
+                //make a return leg
+                FlightLeg legB = new(legA);
+                legB.DepAirportCode = legA.ArrAirportCode;
+                legB.ArrAirportCode = legA.DepAirportCode; 
                 legB.FlightNumber = 4321;
-                legB.AcTypeCode = "321";
-                legB.AcConfiguration = "Y180";
-                legB.AcVersion = "AWX180Y";
-                legB.STD = legB.FlightDate.Value.AddHours(14);
-                legB.STA = legB.STD.Value.AddHours(1);
+                legB.STD = legA.STA.Value.AddHours(2); // 13:00
+                legB.STA = legB.STD.Value.AddHours(1); // 14:00
                 SetLocalDiff(legB, 60);
                 yield return legB;
             }
         }
 
         private static void Example06_WriteMetdataExample()
-        {
-            var ssimReader = SsimReader.Create();
-
+        { 
             var season = Gna.Iata.Season.Now();
             
             //Create some legs
